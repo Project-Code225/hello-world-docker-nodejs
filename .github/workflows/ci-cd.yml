@@ -22,5 +22,8 @@ jobs:
     - name: Run Docker container
       run: docker run -d -p 3000:3000 hello-world-nodejs
 
+    - name: Wait for server to start
+      run: sleep 10
+  
     - name: Test Application
       run: curl -f http://localhost:3000
